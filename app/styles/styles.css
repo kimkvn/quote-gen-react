@@ -35,7 +35,7 @@
       font-size: 7em;
       top: 30px; }
     .quote-box .quote-wrapper .quote-mark, .quote-box .quote-wrapper h1, .quote-box .quote-wrapper .author {
-      color: transparent;
+      color: white;
       transition: color 2s, text-shadow 0.5s; }
     .quote-box .quote-wrapper .author {
       text-align: right;
@@ -78,9 +78,9 @@
     text-decoration: underline; }
     .credits div a:hover {
       color: white; }
-
 .credits .made-by {
   left: 1em; }
-
 .credits .photos-by {
   right: 1em; }
+
+/*# sourceMappingURL=styles.css.map */

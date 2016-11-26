@@ -16,8 +16,12 @@ var QuoteGen = React.createClass({
       type: 'GET',
       data: {},
       dataType: 'json',
-      success: function(data){
-        console.log(data)
+      success: (data) => {
+        this.setState({
+          quote: data.quote,
+          author: '-'+data.author
+        })
+                console.log(data)
       },
       error: function(err){
         alert(err);
@@ -25,7 +29,7 @@ var QuoteGen = React.createClass({
       beforeSend: function(xhr){
         xhr.setRequestHeader('X-Mashape-Authorization', "dwT2puf9UhmshZ9HCTST3CohCRrQp1NZTnBjsnRX41vK4WGw0f");
       }
-    })
+    });
 
 
 
@@ -45,9 +49,11 @@ var QuoteGen = React.createClass({
       <div className="quote-wrapper">
         <span className="quote-mark">&ldquo;</span>
         <h1 className="quote">
+          {this.state.quote}
         </h1>
 
         <div className="author">
+          {this.state.author}
         </div>
       </div>
       <div className="btn-wrap">
