@@ -11,14 +11,32 @@ var QuoteGen = React.createClass({
 
   componentDidMount: function(){
     var quoteAPI = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies';
-    this.serverRequest =
-      $.get(quoteAPI,
-        (data) => {
-          console.dir(data.items)
-          this.setState({
-            videoInfo: data.items
-          });
-        }.bind(this));
+    $.ajax({
+      url: quoteAPI,
+      type: 'GET',
+      data: {},
+      dataType: 'json',
+      success: function(data){
+        console.log(data)
+      },
+      error: function(err){
+        alert(err);
+      },
+      beforeSend: function(xhr){
+        xhr.setRequestHeader('X-Mashape-Authorization', "dwT2puf9UhmshZ9HCTST3CohCRrQp1NZTnBjsnRX41vK4WGw0f");
+      }
+    })
+
+
+
+    // this.serverRequest =
+    //   $.get(quoteAPI,
+    //     (data) => {
+    //       console.dir(data.items)
+    //       this.setState({
+    //         videoInfo: data.items
+    //       });
+    //     }.bind(this));
   },
 
   render: function(){
