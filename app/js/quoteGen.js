@@ -56,4 +56,4 @@ var QuoteGen = React.createClass({
   }
 });
 
-ReactDOM.render(<QuoteGen />, document.getElementById('quoteGen'))
+ReactDOM.render(<QuoteGen />, document.getElementById('quoteGen'));
