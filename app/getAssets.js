@@ -80,8 +80,8 @@ $(document).ready(function(){
     requests to the quotes and photos apis.
   */
   $('.new-quote').on('click', function(){
-    $('h1, .author, .quote-mark').removeClass('focus');
-    $('h1, .author, .quote-mark').addClass('blur');
+    // $('h1, .author, .quote-mark').removeClass('focus');
+    // $('h1, .author, .quote-mark').addClass('blur');
 
     //getQuote();
     getPhoto();

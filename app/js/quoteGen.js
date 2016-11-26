@@ -7,9 +7,11 @@ var QuoteGen = React.createClass({
     };
   },
 
-  // .header('X-Mashape-Authorization', "dwT2puf9UhmshZ9HCTST3CohCRrQp1NZTnBjsnRX41vK4WGw0f")
-
   componentDidMount: function(){
+    this.getQuote();
+  },
+
+  getQuote: function(){
     var quoteAPI = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies';
     $.ajax({
       url: quoteAPI,
@@ -30,17 +32,6 @@ var QuoteGen = React.createClass({
         xhr.setRequestHeader('X-Mashape-Authorization', "dwT2puf9UhmshZ9HCTST3CohCRrQp1NZTnBjsnRX41vK4WGw0f");
       }
     });
-
-
-
-    // this.serverRequest =
-    //   $.get(quoteAPI,
-    //     (data) => {
-    //       console.dir(data.items)
-    //       this.setState({
-    //         videoInfo: data.items
-    //       });
-    //     }.bind(this));
   },
 
   render: function(){
@@ -57,7 +48,7 @@ var QuoteGen = React.createClass({
         </div>
       </div>
       <div className="btn-wrap">
-        <div className="new-quote">Get New Quote</div>
+        <button className="new-quote" onClick={this.getQuote}>Get New Quote</button>
         <div className="twitter"></div>
       </div>
       </section>
