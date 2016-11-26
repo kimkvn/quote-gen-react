@@ -46,32 +46,32 @@ $(document).ready(function(){
   // };
 
   /* GET request to the photos api */
-  function getPhoto(){
-    $.ajax({
-      url: photoAPI+'?key='+photoKey+'&q=nature+landscape&image_type=photo&per_page=50',
-      type: 'GET',
-      data: {},
-      dataType: 'json',
-      success: function(data){
-
-        /* RNG, max = 50 because that's the parameter set in the url of this request */
-        var randNum = Math.floor(Math.random()*(50 - 0 + 1));
-
-        /* setting the img element to the randomized photo URL */
-        var photoURL = data.hits[randNum].webformatURL;
-
-        $('.photo-bg img').attr('src', photoURL);
-
-      },
-      error: function(err){
-        alert(err);
-      }
-    });
-  };
+  // function getPhoto(){
+  //   $.ajax({
+  //     url: photoAPI+'?key='+photoKey+'&q=nature+landscape&image_type=photo&per_page=50',
+  //     type: 'GET',
+  //     data: {},
+  //     dataType: 'json',
+  //     success: function(data){
+  //
+  //       /* RNG, max = 50 because that's the parameter set in the url of this request */
+  //       var randNum = Math.floor(Math.random()*(50 - 0 + 1));
+  //
+  //       /* setting the img element to the randomized photo URL */
+  //       var photoURL = data.hits[randNum].webformatURL;
+  //
+  //       $('.photo-bg img').attr('src', photoURL);
+  //
+  //     },
+  //     error: function(err){
+  //       alert(err);
+  //     }
+  //   });
+  // };
 
   /* Gotta initiate the AJAX requests upon page load. */
   //getQuote();
-  getPhoto();
+  // getPhoto();
 
 
   /*
@@ -84,7 +84,7 @@ $(document).ready(function(){
     // $('h1, .author, .quote-mark').addClass('blur');
 
     //getQuote();
-    getPhoto();
+    // getPhoto();
   });
 
 });
