@@ -7,6 +7,10 @@ var PhotoGen = React.createClass({
   },
 
   componentDidMount: function(){
+    this.photoGen();
+  },
+
+  photoGen: function(){
     var photoAPI = 'https://pixabay.com/api/';
     var photoKey = '3816165-f45dd5d04573ce59bcdfc3e48';
     $.ajax({
@@ -19,7 +23,7 @@ var PhotoGen = React.createClass({
 
         /* RNG, max = 50 because that's the parameter set in the url of this request */
         var randNum = Math.floor(Math.random()*(19 - 0 + 1));
-
+        console.log(randNum)
         /* setting the img element to the randomized photo URL */
         this.setState({
           photoURL: data.hits[randNum].webformatURL
@@ -32,7 +36,6 @@ var PhotoGen = React.createClass({
         alert(err);
       }
     })
-
   },
 
   render: function(){
