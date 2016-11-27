@@ -7,10 +7,10 @@ var PhotoGen = React.createClass({
   },
 
   componentDidMount: function(){
-    this.photoGen();
+    this.getPhoto();
   },
 
-  photoGen: function(){
+  getPhoto: function(){
     var photoAPI = 'https://pixabay.com/api/';
     var photoKey = '3816165-f45dd5d04573ce59bcdfc3e48';
     $.ajax({
