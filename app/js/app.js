@@ -22,7 +22,6 @@ var App = React.createClass({
       data: {},
       dataType: 'json',
       success: (data) => {
-        console.log(data)
 
         /* RNG, max = 50 because that's the parameter set in the url of this request */
         var randNum = Math.floor(Math.random()*(19 - 0 + 1));
@@ -31,8 +30,6 @@ var App = React.createClass({
         this.setState({
           photoURL: data.hits[randNum].webformatURL
         });
-
-        console.log(data.hits[randNum].webformatURL)
 
       },
       error: function(err){
@@ -53,7 +50,6 @@ var App = React.createClass({
           quote: data.quote,
           author: '-'+data.author
         })
-        console.log(data)
 
         /* injecting the Tweet button */
         var tweetBtn = document.createElement('a');
