@@ -6,25 +6,11 @@
 </head>
   <body>
 
-    <div class="photo-bg">
-      <img src=""/>
+    <div id="app">
     </div>
 
-    <section class="quote-box">
-      <div class="quote-wrapper">
-        <span class="quote-mark">&ldquo;</span>
-        <h1 class="quote">
-        </h1>
+    <!--  Credits section  -->
 
-        <div class="author">
-        </div>
-      </div>
-      <div class="btn-wrap">
-        <div class="new-quote">Get New Quote</div>
-        <div class="twitter"></div>
-      </div>
-
-    </section>
     <section class="credits">
       <div class="made-by">
         Made with coffee by <a href="https://kimkvn.github.io" target="_blank">Kevin Kim</a>
@@ -35,8 +21,18 @@
     </section>
 
 </body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser-polyfill.js"></script>
+<script type="text/javascript" src="https://fb.me/react-0.14.7.js"></script>
+<script type="text/javascript" src="https://fb.me/react-dom-0.14.7.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 <script src="app/getAssets.js"></script>
+<script src="app/js/app.js" type="text/babel"></script>
+
+
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};

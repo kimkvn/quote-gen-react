@@ -1,6 +1,4 @@
 .photo-bg {
-  background-size: cover;
-  display: block;
   width: 200%;
   height: 200%;
   left: -50%;
@@ -35,17 +33,10 @@
       font-size: 7em;
       top: 30px; }
     .quote-box .quote-wrapper .quote-mark, .quote-box .quote-wrapper h1, .quote-box .quote-wrapper .author {
-      color: transparent;
-      transition: color 2s, text-shadow 0.5s; }
+      color: white; }
     .quote-box .quote-wrapper .author {
       text-align: right;
       text-transform: uppercase; }
-    .quote-box .quote-wrapper .blur {
-      color: transparent;
-      transition: color 0.5s, text-shadow 2s; }
-    .quote-box .quote-wrapper .focus {
-      color: white;
-      transition: color 2s, text-shadow 0.5s; }
 
 .btn-wrap {
   padding-top: 2.5ex;
@@ -64,7 +55,7 @@
       background: black;
       cursor: pointer;
       transition: background 0.5s, color 1s; }
-  .btn-wrap .twitter {
+  .btn-wrap #twitter {
     position: absolute;
     right: 0; }
 
@@ -78,9 +69,9 @@
     text-decoration: underline; }
     .credits div a:hover {
       color: white; }
-
 .credits .made-by {
   left: 1em; }
-
 .credits .photos-by {
   right: 1em; }
+
+/*# sourceMappingURL=styles.css.map */
