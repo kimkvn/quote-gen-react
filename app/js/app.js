@@ -53,7 +53,19 @@ var App = React.createClass({
           quote: data.quote,
           author: '-'+data.author
         })
-                console.log(data)
+        console.log(data)
+
+        /* injecting the Tweet button */
+        var tweetBtn = document.createElement('a');
+        tweetBtn.setAttribute('class', 'twitter-share-button');
+        tweetBtn.setAttribute('href', 'https://twitter.com/intent/tweet');
+        tweetBtn.setAttribute('data-text', "\""+data.quote+"\"");
+        tweetBtn.setAttribute('data-url', 0);
+        document.getElementById('twitter').appendChild(tweetBtn)
+
+        /* necessary step for the twitter script to recognize the updated data*/
+        twttr.widgets.load();
+
       },
       error: function(err){
         alert(err);
@@ -67,6 +79,11 @@ var App = React.createClass({
   updateView: function(){
     this.getQuote();
     this.getPhoto();
+
+    /* preventing a cluster of Tweet buttons from populating */
+    var twitterBtns = document.getElementsByClassName('twitter-share-button');
+    twitterBtns[0].parentNode.removeChild(twitterBtns[0]);
+
   },
 
   render: function(){
@@ -88,7 +105,7 @@ var App = React.createClass({
       </div>
       <div className="btn-wrap">
         <button className="new-quote" onClick={this.updateView}>Get New Quote</button>
-        <div className="twitter"></div>
+        <div id="twitter"></div>
       </div>
       </section>
     </div>
