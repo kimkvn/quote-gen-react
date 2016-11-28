@@ -64,7 +64,7 @@
       background: black;
       cursor: pointer;
       transition: background 0.5s, color 1s; }
-  .btn-wrap .twitter {
+  .btn-wrap #twitter {
     position: absolute;
     right: 0; }
 
